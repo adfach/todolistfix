@@ -1,0 +1,205 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto; /* Aktifkan scroll jika konten melebihi tinggi layar */
+    padding: 20px; /* Tambahkan padding untuk perangkat mobile */
+    box-sizing: border-box; /* Penting untuk responsivitas */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px; /* Kurangi padding untuk perangkat mobile */
+    width: 100%; /* Lebar penuh */
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Penting untuk responsivitas */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px; /* Kurangi margin untuk perangkat mobile */
+}
+
+header h1 {
+    font-size: 2em; /* Kurangi ukuran font untuk perangkat mobile */
+    margin-bottom: 10px;
+}
+
+.date-time {
+    font-size: 1em; /* Kurangi ukuran font untuk perangkat mobile */
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column; /* Tumpuk elemen pada layar kecil */
+    margin-bottom: 20px;
+}
+
+.input-section input[type="text"],
+.input-section input[type="datetime-local"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Tambahkan margin bawah untuk tumpukan */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-sizing: border-box; /* Penting untuk responsivitas */
+    width: 100%; /* Lebar penuh */
+}
+
+.input-section button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Lebar penuh */
+}
+
+.input-section button:hover {
+    background-color: #0056b3;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: move;  /* Ubah kursor menjadi "move" saat di atas item */
+}
+
+#task-list li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#task-list li .task-content {
+    flex-grow: 1;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column; /* Susun text dan date-time vertikal */
+}
+
+#task-list li .task-content span {
+    margin-bottom: 5px; /* Spasi antara text dan date-time */
+}
+
+#task-list li .task-actions {
+    display: flex;
+}
+
+#task-list li .task-actions button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#task-list li .task-actions button:hover {
+    color: #ddd;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%; /* Lebar modal untuk mobile */
+    max-width: 600px;
+    position: relative;
+    box-sizing: border-box; /* Penting untuk responsivitas */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+    box-sizing: border-box; /* Penting untuk responsivitas */
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Completed Task Styling */
+.completed {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+/* Media Query untuk layar yang lebih besar */
+@media (min-width: 768px) {
+    .input-section {
+        flex-direction: row; /* Kembali ke tata letak horizontal */
+    }
+
+    .input-section input[type="text"],
+    .input-section input[type="datetime-local"] {
+        margin-bottom: 0;
+        margin-right: 10px;
+        width: auto; /* Biarkan browser menghitung lebar */
+    }
+
+    .input-section button {
+        width: auto; /* Biarkan browser menghitung lebar */
+    }
+}
