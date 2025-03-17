@@ -1,45 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome To-Do List</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJzc6zh/sesDIWqz9iF+jO+WykG2pYwcqqUeOd3JpUJguAHuWfRPemN4jz0iXU/q6vLnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+      integrity="sha512-aOG0c6nPNzGk+5zjwyJzc6zh/sesDIWqz9iF+jO+WykG2pYwcqqUeOd3JpUJguAHuWfRPemN4jz0iXU/q6vLnw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="icon.png" type="image/png">
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Awesome To-Do List</h1>
-            <div class="date-time">
-                <span id="date"></span>
-                <span id="time"></span>
-            </div>
-        </header>
-
-        <div class="input-section">
-            <input type="text" id="new-task-input" placeholder="Tambahkan tugas baru...">
-            <input type="datetime-local" id="task-datetime">
-            <button id="add-task-button">Tambah</button>
+      <header>
+        <h1>Awesome To-Do List</h1>
+        <div class="date-time">
+          <span id="date"></span>
+          <span id="time"></span>
         </div>
+      </header>
 
-        <ul id="task-list">
-            <!-- Tugas-tugas akan ditambahkan di sini -->
-        </ul>
+      <div class="input-section">
+        <input
+          type="text"
+          id="new-task-input"
+          placeholder="Tambahkan tugas baru..."
+        />
+        <input type="datetime-local" id="task-datetime" />
+        <button id="add-task-button">Tambah</button>
+      </div>
+
+      <ul id="task-list">
+        <!-- Tugas-tugas akan ditambahkan di sini -->
+      </ul>
     </div>
 
     <div id="note-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Catatan Tugas</h2>
-            <textarea id="note-text" placeholder="Tambahkan catatan untuk tugas ini..."></textarea>
-            <button id="save-note-button">Simpan Catatan</button>
-        </div>
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <h2>Catatan Tugas</h2>
+        <textarea
+          id="note-text"
+          placeholder="Tambahkan catatan untuk tugas ini..."
+        ></textarea>
+        <button id="save-note-button">Simpan Catatan</button>
+      </div>
     </div>
+
+    <footer class="footer">
+      <p>© 2025 Awesome To-Do List. Dibuat oleh Aditya Fakhri</p>
+      <div class="social-icons">
+        <a href="#" target=""><i class="fab fa-facebook"></i></a>
+        <a href="#" target=""><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/adfach5758/" target=""
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/adfach" target=""
+          ><i class="fab fa-github"></i
+        ></a>
+      </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
