@@ -4,6 +4,7 @@ body {
     color: #fff;
     margin: 0;
     display: flex;
+    flex-direction: column; /* Tambahkan ini */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -202,4 +203,28 @@ header h1 {
     .input-section button {
         width: auto; /* Biarkan browser menghitung lebar */
     }
+}
+
+.footer {
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Footer akan selalu berada di bawah */
+    border-radius: 5px;
+    font-size: 0.9em;
+    display: flex;                /* Add this line */
+    flex-direction: column;       /* And this line */
+    align-items: center;          /* And this line */
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.2em;
+    margin: 0 10px;
+    text-decoration: none;
 }
