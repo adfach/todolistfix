@@ -228,3 +228,8 @@ header h1 {
     margin: 0 10px;
     text-decoration: none;
 }
+
+.studio {
+  width: 30%;
+  height: 30%;
+}
